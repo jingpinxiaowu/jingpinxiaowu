@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>详情</title>
+		<meta name="keywords" content="精品小屋,精品小屋" />
+		<meta name="description" content="(精品小屋)精品小屋 精品小屋 - 精品小屋" />
+		<meta name="author" content="jingpinxiaowu https://jingpinxiaowu.github.io/" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- <script type="text/javascript" src="json/quality-photo.json"></script> -->
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/pandaTab.js"></script>
+		<script src="js/shadowbox.js"></script>
+		<script src="js/jquery.qrcode.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/pandaPicshow.js"></script>
+	</head>
+	<body
+		class="y2017 m07 d08 h16 home page pageid-62 page-author-panda page-template page-template-page-all-php bg-gray">
+		<div class="backgroundImg" style="background-image:url(/demo1054/uploads/allimg/210910/1-194601-0-4B0.jpeg)">
+		</div>
+
+		<div id="header">
+			<div class="categoryTab-full hidden-xs">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-push-1 categoryTab-content no-padding">
+							<div class="categoryTab" pandaTab tabHeight='45px' transitionTime='500' rebound='true'
+								navigatorWidth="30px">
+								<div class="menu-menu-1-container">
+									<ul id="menu-menu-1" class="menu">
+										<li><a href="index.html" title="网站首页">首页</a></li>
+
+										<li class=""><a href="newlist.html"> 优质套图 </a></li>
+										
+										<li class=""><a href="jplist.html"> 精品套图 </a></li>
+
+										<!-- <li class=""><a href="index.html"> 私房 </a></li>
+
+										<li class=""><a href="index.html"> 女神 </a></li>
+
+										<li class=""><a href="index.html"> 萝莉 </a></li>
+
+										<li class=""><a href="index.html"> 模特 </a></li> -->
+
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-sm-1 col-sm-push-1 search"><i class="fa fa-search" aria-hidden="true"></i>
+							<form method="post" name="searchform" class="sidebar-searchform" id="searchform"
+								action="/demo1054/plus/search.php">
+								<div class="main sidebar-search">
+									<input class="searchInput" type="text" id="s" name="q" value="" placeholder="输入关键字">
+									<input class="searchIcon" type="submit" value="&#xf002" id="searchsubmit">
+								</div>
+							</form>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="mobile visible-xs-block">
+				<!-- header/mobile -->
+				<div class="container">
+					<div class="col-xs-2 menu no-padding">
+						<div class="menu-icon" style="position: fixed;left: 85%;">
+							<div class="bread bread1"></div>
+							<div class="bread bread2"></div>
+							<div class="bread bread3"></div>
+						</div>
+						<div class="menu-list">
+							<div class="list">
+								<div class="menu-menu-1-container">
+									<ul id="menu-menu-2" class="menu">
+										<li><a href="index.html" title="网站首页">首页</a></li>
+
+										<li class=""><a href="newlist.html"> 优质套图 </a></li>
+										
+										<li class=""><a href="jplist.html"> 精品套图 </a></li>
+
+										<!-- <li class=""><a href="index.html"> 私房 </a></li>
+
+										<li class=""><a href="index.html"> 女神 </a></li>
+
+										<li class=""><a href="index.html"> 萝莉 </a></li>
+
+										<li class=""><a href="index.html"> 模特 </a></li> -->
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-xs-10 mobileSearch"><i class="fa fa-search" aria-hidden="true"></i>
+						<form method="post" name="searchform" class="sidebar-searchform" id="searchform"
+							action="/demo1054/plus/search.php">
+							<div class="main sidebar-search">
+								<input class="searchInput" type="text" id="s" name="q" value="" placeholder="输入关键字">
+								<input class="searchIcon" type="submit" value="&#xf002" id="searchsubmit">
+							</div>
+						</form>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- #header -->
+		<div id="wrapper" class="hfeed">
+			<div class="topTitle">
+				<h1>精品小屋</h1>
+			</div>
+			<div class="category container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="post-content">
+							<article>
+								<div pandaPicshow='enable' id="deta">
+									<div class="showBox cover" ratio="1.7778"></div>
+									<div class="thumbnails"> 
+										<a :fullsize="img1"
+											:thumbnail="img1"
+											:description="newsequence">
+										</a>
+										<a :fullsize="img2"
+											:thumbnail="img2"
+											:description="newsequence">
+										</a>
+										<a :fullsize="img3"
+											:thumbnail="img3"
+											:description="newsequence">
+										</a>
+										<!-- <a fullsize="https://s1.328888.xyz/2022/08/11/6OfwB.jpg"
+											thumbnail="https://s1.328888.xyz/2022/08/11/6OfwB.jpg"
+											description="5eff5e4536">
+										</a> -->
+										
+									</div>
+								</div>
+								<div class="col-xs-12 model sxy" id="botprice">
+									<ul class="row">
+										<div class="post-previous twofifth"> 加Q获取原图： <br><span style="color: blue;">1583301688</span> </div>
+										<div class="post-next twofifth"> 价格： <br><span style="color: skyblue;">{{ price }}/￥</span> </div>
+									</ul>
+									<div class="row" style="width: 80%;margin: 0 auto;">
+										ps:{{ content }}
+									</div>
+								</div>
+							</article>
+						</div>
+						<!-- <div class="xiangguan">
+							<div class="">
+								<div class="row">
+									<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a
+											href="/demo1054/a/xinggan/5.html" target="_blank">
+											<div class="post-photo album">
+												<div class="img">
+													<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1H458-0-5B9.jpeg);"
+														ratio="1" realratio="1"></div>
+												</div>
+												<h3 class="title">韩国宅男女神图片</h3>
+											</div>
+										</a></div>
+									<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a
+											href="/demo1054/a/xinggan/4.html" target="_blank">
+											<div class="post-photo album">
+												<div class="img">
+													<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1G946-0-2206.jpeg);"
+														ratio="1" realratio="1"></div>
+												</div>
+												<h3 class="title">韩国宅男女神图片</h3>
+											</div>
+										</a></div>
+									<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a
+											href="/demo1054/a/xinggan/3.html" target="_blank">
+											<div class="post-photo album">
+												<div class="img">
+													<div style="background-image:url(/demo1054/uploads/allimg/210910/1-122317-0-c37.jpeg);"
+														ratio="1" realratio="1"></div>
+												</div>
+												<h3 class="title">韩国宅男女神图片</h3>
+											</div>
+										</a></div>
+									<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a
+											href="/demo1054/a/xinggan/2.html" target="_blank">
+											<div class="post-photo album">
+												<div class="img">
+													<div style="background-image:url(/demo1054/uploads/allimg/210910/1-122011-0-2559.jpeg);"
+														ratio="1" realratio="1"></div>
+												</div>
+												<h3 class="title">韩国宅男女神图片</h3>
+											</div>
+										</a></div>
+									<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a
+											href="/demo1054/a/xinggan/1.html" target="_blank">
+											<div class="post-photo album">
+												<div class="img">
+													<div style="background-image:url(/demo1054/uploads/allimg/210910/1-112207-0-E43.jpeg);"
+														ratio="1" realratio="1"></div>
+												</div>
+												<h3 class="title">韩国宅男女神图片</h3>
+											</div>
+										</a></div>
+
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="mainPageNav"></div>
+		</div>
+		<div id="footer" class="container"><span class="text">Copyright &copy; 2021 图片网站模板 <a
+					href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">苏ICP12345678</a> <a
+					href="/demo1054/sitemap.xml" target="_blank">XML地图</a></span>
+		</div>
+		
+		<script type="module">
+			import {detatest} from "./js/youzhi.js";
+			var newdetatest = detatest();
+			
+			new Vue({
+				el:"#deta",
+				data:{
+					newsequence:"",
+					img1:"",
+					img2:"",
+					img3:"",
+					
+					// newindexid:"",
+				},
+				computed: {},
+				watch: {},
+				created() {
+					var newdetatest = detatest();
+					
+					var index = window.location.search;
+					var newindexs = index.charAt(index.length - 1);
+					// var newindexs = detatest().id;
+					this.img1 = newdetatest[newindexs].imgurl1;
+					this.img2 = newdetatest[newindexs].imgurl2;
+					this.img3 = newdetatest[newindexs].imgurl3;
+					this.newsequence = newdetatest[newindexs].total;
+					this.price = newdetatest[newindexs].price;
+					console.log("550",this.newsequence,index,newindexs)
+				},
+				mounted() {
+					
+				},
+				
+				destroyed() {},
+				methods: {},
+				
+			})
+			new Vue({
+				el:"#botprice",
+				data:{
+					price: 1,
+					content: "",
+					// newindexid:"",
+				},
+				created() {
+					var newdetatest = detatest();
+					var index = window.location.search;
+					var newindexs = index.charAt(index.length - 1);
+					
+					this.price = newdetatest[newindexs].price;
+					this.content = newdetatest[newindexs].content;
+				},
+			})
+		</script>
+	</body>
+</html>
