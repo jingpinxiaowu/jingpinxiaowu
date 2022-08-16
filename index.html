@@ -1,11 +1,307 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
-		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>精品小屋</title>
+		<meta name="keywords" content="精品小屋,精品小屋" />
+		<meta name="description" content="(精品小屋)精品小屋 精品小屋 - 精品小屋" />
+		<meta name="author" content="jingpinxiaowu https://jingpinxiaowu.github.io/" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/shadowbox.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/vue-router.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/pandaTab.js"></script>
+		<script src="js/shadowbox.js"></script>
+		<script src="js/jquery.qrcode.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/pandaPicshow.js"></script>
+		
 	</head>
-	<body>
-		hello word！
-		<input type="image" src="https://s1.328888.xyz/2022/08/11/6OfwB.jpg" />
+	<body
+		class="y2017 m07 d08 h16 home page pageid-62 page-author-panda page-template page-template-page-all-php bg-gray">
+		<div class="backgroundImg" style="background-image:url(/demo1054/uploads/allimg/210910/1-194601-0-4B0.jpeg)">
+		</div>
+
+		<div id="header">
+			<div class="categoryTab-full hidden-xs">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-10 col-sm-push-1 categoryTab-content no-padding">
+							<div class="categoryTab" pandaTab tabHeight='45px' transitionTime='500' rebound='true'
+								navigatorWidth="30px">
+								<div class="menu-menu-1-container">
+									<ul id="menu-menu-1" class="menu">
+										<li><a href="index.html" title="网站首页">首页</a></li>
+
+										<li class=""><a href="newlist.html"> 优质套图 </a></li>
+										
+										<li class=""><a href="jplist.html"> 精品套图 </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+<!-- 						<div class="col-sm-1 col-sm-push-1 search"><i class="fa fa-search" aria-hidden="true"></i>
+							<form method="post" name="searchform" class="sidebar-searchform" id="searchform"
+								action="/demo1054/plus/search.php">
+								<div class="main sidebar-search">
+									<input class="searchInput" type="text" id="s" name="q" value="" placeholder="输入关键字">
+									<input class="searchIcon" type="submit" value="&#xf002" id="searchsubmit">
+								</div>
+							</form>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="mobile visible-xs-block">
+				<!-- header/mobile -->
+				<div class="container">
+					<div class="col-xs-2 menu no-padding">
+						<div class="menu-icon" style="position: fixed;left: 85%;">
+							<div class="bread bread1"></div>
+							<div class="bread bread2"></div>
+							<div class="bread bread3"></div>
+						</div>
+						<div class="menu-list">
+							<div class="list">
+								<div class="menu-menu-1-container">
+									<ul id="menu-menu-2" class="menu">
+										<li><a href="index.html" title="网站首页">首页</a></li>
+
+										<li class=""><a href="newlist.html"> 优质套图 </a></li>
+										
+										<li class=""><a href="jplist.html"> 精品套图 </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="col-xs-10 mobileSearch"><i class="fa fa-search" aria-hidden="true"></i>
+						<form method="post" name="searchform" class="sidebar-searchform" id="searchform"
+							action="/demo1054/plus/search.php">
+							<div class="main sidebar-search">
+								<input class="searchInput" type="text" id="s" name="q" value="" placeholder="输入关键字">
+								<input class="searchIcon" type="submit" value="&#xf002" id="searchsubmit">
+							</div>
+						</form>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- #header -->
+		<div id="wrapper" class="hfeed">
+			<div class="topTitle">
+				<h1>最近新更</h1>
+				<p class="description">精品小屋</p>
+			</div>
+			<div class="category container">
+				<div class="row" id="deitemP">
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid" v-for="(deitem,index) in deitems" :key="index" @click="dianjitiaozhuan(deitem,index)">
+						<a target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div :style="{backgroundImage: 'url(' + deitem.imgurl1 + ')'}" ratio="1" realratio="1"></div>
+									<!-- <div style="background-image:url(https://s1.328888.xyz/2022/08/11/6OfwB.jpg);"
+										ratio="1" realratio="1" ></div> -->
+								</div>
+								<h3 class="title">{{ deitem.title }} &nbsp;&nbsp;&nbsp;{{deitem.time}}</h3>
+							</div>
+						</a>
+					</div>
+					
+					<!-- <div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-192G9-0-1218.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-192521-0-4T4.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-192341-0-U96.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1Z117-0-K10.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1T511-0-Y57.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1S938-0-P26.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1P521-0-OC.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1K924-0-K33.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1K628-0-4504.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1H458-0-5B9.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1I030-0-aO.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-1G946-0-2206.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-122317-0-c37.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-122011-0-2559.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div>
+					<div class="col-xs-6 col-sm-4 col-lg-3 waterfallGrid"><a href="details.html"
+							target="_blank">
+							<div class="post-photo album">
+								<div class="img">
+									<div style="background-image:url(/demo1054/uploads/allimg/210910/1-112207-0-E43.jpeg);"
+										ratio="1" realratio="1"></div>
+								</div>
+								<h3 class="title">韩国宅男女神图片</h3>
+							</div>
+						</a></div> -->
+
+				</div>
+				
+			</div>
+		</div>
+
+		<div id="footer" class="container"><span class="text">每日一碗毒鸡汤 &copy; 1 <a
+					href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">2</a> <a
+					href="/demo1054/sitemap.xml" target="_blank">3</a></span></div>
+		<script type="text/javascript" src="js/theme.js"></script>
+		<script type="module">
+			import {detatest} from "./js/new.js";
+			new Vue({
+				el:"#deitemP",
+				data:{
+					deitems:[]
+				},
+				computed: {},
+				watch: {},
+				created() {
+					var newdetatest = detatest();
+					this.deitems = newdetatest;
+					// console.log("222",this.deitems)
+				},
+				mounted() {},
+				destroyed() {},
+				methods: {
+					dianjitiaozhuan(deitem,index){
+						
+						// console.log(index,"230",this.deitems[index])
+						window.location.href = 'newdetails.html?newid='+ index;
+					}
+				},
+				
+			});
+			
+		</script>
 	</body>
 </html>
